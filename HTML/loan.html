@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw</title>
+    <link rel="stylesheet" href="../CSS/Styles.css">
+    <script src="https://kit.fontawesome.com/3d391fd37c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        /* header {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            background-color: #ffffff;
+            padding-bottom: 10px;
+        } */
+        header h1, header span {
+            font-size:  2rem;
+            font-weight: 900;
+        }
+        body {
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        div.tron {
+            background-image: url("../Images/pattern.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            width: 100%;
+        }
+        div.main {
+            background-color: #fff;
+            border-radius: 50px 50px 0 0;
+            padding: 30px 20px;
+            flex-grow: 1;
+            margin-top: 20px;
+        }
+        div.head {
+            text-align: center;
+        }
+        div.line {
+            border: 1px solid #aaa;
+            border-radius: 25px;
+            margin: 40px 0 30px;
+            padding: 20px;
+        }
+        div.top {
+            display: flex;
+            justify-content: space-between;
+        }
+        div.top p {
+            color: var(--purple);
+        }
+        div.text {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0 10px;
+        }
+        div.text h1 + span {
+            width: 75px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(204, 183, 238);
+            color: var(--purple);
+            font-size: 1.3rem;
+        }
+        div.recommended {
+            text-align: center;
+            background-image: linear-gradient(90deg, #eee , rgb(209, 144, 247), rgb(209, 144, 247));
+            border-radius: 25px;
+            padding: 25px 15px 15px 15px;
+        }
+        div.recommended h2 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin: 0 0 20px 0;
+        }
+        div.business {
+            background-color: rgb(26, 3, 56);
+            color: #fff;
+            padding: 25px;
+            border-radius: 25px;
+        }
+        div.business > div.top > p {
+            color: #fff;
+        }
+        div.business > div.text h1 {
+            color: #fff;
+        }
+        div.business > div.text h1 + span {
+            background-color: #fff;
+            color: initial;
+        }
+    </style>
+</head>
+<body>
+    <div class="tron">
+    <header>
+        <span onclick="document.location='../index.html'"><i class="fa-sharp fa-solid fa-arrow-left"></i></span>
+        <h1>Loan</h1>
+        <span>
+        </span>
+    </header>
+    </div>
+    <div class="main">
+        <div class="head">
+            <h1>We have the best loan plans</h1>
+        </div>
+        <div class="line">
+            <div class="top">
+                <p>Basic Plan</p>
+                <p>Start right now</p>
+            </div>
+            <div class="text">
+                <h1>$40 <span>/month</span></h1>
+                <span><i class="fa-solid fa-chevron-right"></i></span>
+            </div>
+        </div>
+        <div class="recommended">
+            <h2>Recommended</h2>
+            <div class="business">
+                <div class="top">
+                    <p>Business plan</p>
+                    <p>Start right now</p>
+                </div>
+                <div class="text">
+                    <h1>$70 <span>/month</span></h1>
+                    <span><i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

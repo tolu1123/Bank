@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statement</title>
+    <link rel="stylesheet" href="../CSS/Styles.css">
+    <script src="https://kit.fontawesome.com/3d391fd37c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        span.statement {
+            background-color: var(--purple);
+            color: #fff;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            background-color: #fff;
+        }
+        header h1, header span {
+            font-size:  1rem;
+        }
+        header h1 {
+            vertical-align: text-top;
+        }
+        div.graph {
+            margin: 20px 0 30px 0;
+        }
+        div.timeframe {
+            display: flex;
+            justify-content: space-around;
+            margin: 0 0 30px 0;
+        }
+        a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        }
+        
+        .gallery img {
+            max-width: 100%;
+            max-height: auto;
+        }
+        a.active {
+            border-color: var(--purple);
+            color: var(--purple);
+        }
+        a:focus {
+            border-color: var(--purple);
+            color: var(--purple);
+        }
+
+        div.budget {
+            border: none;
+            background-image: linear-gradient(90deg, #eee , rgb(209, 144, 247), rgb(209, 144, 247));
+            border-radius: 20px;
+            padding: 20px;
+        }
+        div.budget section {
+            display: flex;
+            justify-content: space-between;
+        }
+        div.budget section p, div.budget section h2 {
+            vertical-align: baseline;
+            color: #fff;
+        }
+        div.level {
+            width: 100%;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 5px 5px 5px 5px;
+        }
+        div.inlev {
+            border-radius: inherit;
+            background-color: var(--purple);
+            width: 65%;
+            height: 100%;
+        }
+        div.section section i {
+            font-size: 3rem;
+        }
+        
+        
+        div.icon_holder {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 30px 0 70px;
+        }
+        div.icon_holder > div {
+            width: calc(50% - 20px);
+            border: 1px solid var(--purple);
+            border-radius: 15px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px 10px;
+            margin: 0 0 20px;
+        }
+        div.icon_holder > div > section {
+            width: calc(70% - 10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        div.icon_holder > div > div.icon {
+            width: 30%;
+            aspect-ratio: 1/1;
+            border: 1px solid;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.icon_holder > div > section h2,div.icon_holder > div > section  p {
+            color: var(--purple);
+        }
+        div.icon_holder > div > div.icon i {
+            color: var(--purple);
+        }
+        div.icon_holder > div.food > div.icon {
+            background-color: rgb(247, 247, 4);
+        }
+        div.icon_holder > div.investment > div.icon {
+            background-color: rgb(243, 198, 243);
+        }
+        div.icon_holder > div.rent > div.icon {
+            background-color: rgb(250, 191, 201);
+        }
+        div.icon_holder > div.transport > div.icon {
+            border: 1px solid var(--purple);
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <span onclick="document.location='../index.html'"><i class="fa-sharp fa-solid fa-arrow-left"></i></span>
+        <h1>Statement</h1>
+        <span><i class="fa-regular fa-calendar-days"></i></span>
+    </header>
+    <div class="container">
+        <div class="graph">
+            <div class="timeframe">
+                <a href="#" class="active" onclick="changeImage('../Images/Daily.png')"><span>D</span></a>
+                <a href="#" onclick="changeImage('../Images/Weekly.png')"><span>W</span></a>
+                <a href="#" onclick="changeImage('../Images/Monthly.png')"><span>M</span></a>
+                <a href="#" onclick="changeImage('../Images/Yearly.png')"><span>Y</span></a>
+            </div>
+            <div class="gallery">
+                <img id="current-image" src="../Images/Daily.png">
+            </div>
+        </div>
+
+        <div class="budget">
+            <section><p>Budget for May</p>
+            <h2>$45T</h2>
+            </section>
+            <div class="level">
+                <div class="inlev"></div>
+            </div>
+        </div>
+
+        <div class="icon_holder">
+            <div class="food">
+                <section>
+                    <h2>25%</h2>
+                    <p>Food</p>
+                </section>
+                <div class="icon">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+            </div>
+
+            <div class="investment">
+                <section>
+                    <h2>10%</h2>
+                    <p>Investment</p>
+                </section>
+                <div class="icon">
+                    <i class="fa-solid fa-piggy-bank"></i>
+                </div>
+            </div>
+            
+            <div class="rent">
+                <section>
+                    <h2>30%</h2>
+                    <p>Rent</p>
+                </section>
+                <div class="icon">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+            </div>
+
+            <div class="transport">
+                <section>
+                    <h2>15%</h2>
+                    <p>Transport</p>
+                </section>
+                <div class="icon">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <span class="home" onclick="document.location='../index.html'"><i class="fa-regular fa-credit-card"></i></span>
+        <span class="statement"><i class="fa-solid fa-chart-simple"></i></span>
+        <span class="notifications" onclick="document.location='notifications.html'"><i class="fa-regular fa-bell"></i><span class="alert">18</span></span>
+        <span class="settings" onclick="document.location='settings.html'"><i class="fa-solid fa-gear"></i></span>
+    </footer>
+
+    <script>
+        function changeImage(imageUrl) {
+          document.getElementById('current-image').src = imageUrl;
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../CSS/Styles.css">
+    <script src="https://kit.fontawesome.com/3d391fd37c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        html {
+            background-color: #ccc;
+        }
+        h2 {
+            font-size: 0.9rem;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            background-color: #ffffff;
+        }
+        header h1, header span {
+            font-size:  1rem;
+        }
+        div.container {
+            background-color: #ccc;
+            width: 100%;
+            margin-bottom: 75px;
+        }
+        span.settings {
+            background-color: var(--purple);
+            color: #fff;
+        }
+        ol {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #fff;
+            padding: 0 20px;
+            margin: 0 -20px 20px;
+        }
+        ol > li {
+            border-top: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            background-color: #fff;
+        }
+        div.container ol:not(:first-child) li:first-child{
+            border-top: none;
+        }
+        div.container > ol:not(:nth-child(4)) > li > span > i,
+        div.container > ol:nth-child(4) > li:last-child > span > i {
+            font-size: 0.9rem;
+        }
+        li > span > i {
+            font-size: 1.3rem;
+        }
+        div.input {
+            margin: 0;
+        }
+        input {
+            display: block;
+            margin:  0 auto 0 auto;
+            background-color: var(--purple);
+            color: #fff;
+            font-size: 1rem;
+            width: 250px;
+            padding: 25px auto;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span onclick="document.location='../index.html'"><i class="fa-sharp fa-solid fa-arrow-left"></i></span>
+        <h1>Settings</h1>
+        <span><i class="fa-regular fa-bell"></i></span>
+    </header>
+
+    <div class="container">
+        <ol>
+            <li>
+                <h2>Your PIN</h2>
+                <span><i class="fa-solid fa-chevron-right"></i></span>
+            </li>
+            <li>
+                <h2>Payment settings</h2>
+                <span><i class="fa-solid fa-chevron-right"></i></span>
+            </li>
+            <li>
+                <h2>Unlock settings</h2>
+                <span><i class="fa-solid fa-chevron-right"></i></span>
+            </li>
+        </ol>
+
+        <ol>
+            <li>
+                <h2>Mobile number</h2>
+                <span><i class="fa-solid fa-chevron-right"></i></span>
+            </li>
+            <li>
+                <h2>Security questions</h2>
+                <span><i class="fa-solid fa-chevron-right"></i></span>
+            </li>
+            <li>
+                <h2>Device Management</h2>
+                <span><i class="fa-solid fa-chevron-right"></i></span>
+            </li>
+        </ol>
+
+        <ol>
+            <li>
+                <h2>Merchants</h2>
+                <span><i class="fa-solid fa-chevron-right"></i></span>
+            </li>
+            <li>
+                <h2>Auto deduct</h2>
+                <span><i class="fa-solid fa-chevron-right"></i></span>
+            </li>
+        </ol>
+
+        <ol>
+            <li>
+                <h2>Speaker on</h2>
+                <span><i class="fa-solid fa-toggle-on" style="color: #a005a0;"></i></span>
+            </li>
+            <li>
+                <h2>Notifications</h2>
+                <span><i class="fa-solid fa-toggle-on" style="color: #a005a0;"></i></span>
+            </li>
+            <li>
+                <h2>About Palmpay</h2>
+                <span><i class="fa-solid fa-chevron-right"></i></span>
+            </li>
+        </ol>
+
+        <div class="input">
+            <input type="submit" value="Log Out">
+        </div>
+
+    </div>
+
+    <footer>
+        <span class="home" onclick="document.location='../index.html'"><i class="fa-regular fa-credit-card"></i></span>
+        <span class="statement" onclick="document.location='statement.html'"><i class="fa-solid fa-chart-simple"></i></span>
+        <span class="notifications" onclick="document.location='notifications.html'"><i class="fa-regular fa-bell"></i><span class="alert">18</span></span>
+        <span class="settings"><i class="fa-solid fa-gear"></i></span>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw</title>
+    <link rel="stylesheet" href="../CSS/Styles.css">
+    <script src="https://kit.fontawesome.com/3d391fd37c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        header {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            background-color: #ffffff;
+            padding-bottom: 10px;
+        }
+        header h1, header span {
+            font-size:  0.9rem;
+        }
+        body {
+            background-color: #ccc;
+        }
+        div.container {
+            margin-top: 20px;
+        }
+        div.withdraw {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+        div.head {
+            display: flex;
+            justify-content: space-between;
+        }
+        a {
+            font-size: 0.65rem;
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+            width: 50%;
+            text-align: center;
+            
+        }
+        a.active {
+            font-weight: bold;
+            border-bottom: 2px solid var(--purple);
+            color: var(--purple);
+        }
+        h3, label {
+            font-size: 0.6rem;
+        }
+        div[id^="page"] {
+            margin-top: 35px;
+        }
+        input {
+            width: 100%;
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+            padding: 5px 10px;
+            outline: none;
+            color: var(--purple);
+            caret-color: var(--purple);
+        }
+        button {
+            display: block;
+            width: 50%;
+            background-color: var(--purple);
+            color: #fff;
+            padding: 5px auto;
+            border: none;
+            margin: 25px auto;
+            height: 50px;
+            font-size: 0.9rem;
+        }
+        select {
+            width: 100%;
+            color: var(--purple);
+            margin: 5px 0 10px;
+        }
+        input[value] {
+             margin-right: 10px;
+        }
+        div.amount input:valid + button {
+            opacity: 1;
+        }
+        div.amount input:not(:valid) + button {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span onclick="document.location='../index.html'"><i class="fa-sharp fa-solid fa-arrow-left"></i></span>
+        <h1>Withdraw</h1>
+        <span>
+        </span>
+    </header>
+
+    <div class="container">
+        <div class="withdraw">
+            <div class="head">
+                <a href="#" onclick="showPage('page1', this)">Cash from Agent</a>
+                <a href="#" onclick="showPage('page2', this)">To Bank Account</a>
+            </div>
+
+            <div id="page1" style="display: none;">
+                <h3>Transfer to Agent to get Cash</h3>
+                <input type="text" placeholder="Enter Agent 10-digit Account No.">
+                <button>NEXT</button>
+            </div>
+              
+            <div id="page2" style="display: none;">
+                <h3>Choose Bank</h3>
+                <select name="bank" id="bank">
+                    <option value="FCMB">FCMB</option>
+                    <option value="WEMA">WEMA</option>
+                    <option value="UBA">UBA</option>
+                    <option value="FIRST BANK">FIRST BANK</option>
+                    <option value="ACCESS BANK">ACCESS BANK</option>
+                    <option value="POLARIS BANK">POLARIS BANK</option>
+                    <option value="OPAY">OPAY</option>
+                    <option value="PALMPAY">PALMPAY</option>
+                    <option value="KUDA">KUDA</option>
+                </select>
+                <div class="amount">
+                    <label for="amount">Amount(&#8358;)</label>
+                    <input type="text" id="amount" value="&#8358;" min-length="4" max-length="8" required>
+                    <button class="needed">Next</button>
+                </div>
+            </div>
+              
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId, link) {
+            // Hide all pages
+            var pages = document.querySelectorAll('[id^="page"]');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+
+            // Show selected page
+            document.getElementById(pageId).style.display = 'block';
+
+            // Add active class to clicked link and remove it from other links
+            var links = document.querySelectorAll('a');
+            for (var i = 0; i < links.length; i++) {
+                if (links[i] === link) {
+                links[i].classList.add('active');
+                } else {
+                links[i].classList.remove('active');
+                }
+            }
+        }
+
+            // Show page2 by default and make the second link active
+            document.getElementById('page2').style.display = 'block';
+            document.querySelectorAll('a')[1].classList.add('active');
+
+    </script>
+</body>
+</html>

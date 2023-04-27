@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="../CSS/Styles.css">
+    <script src="https://kit.fontawesome.com/3d391fd37c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        span.notifications {
+            background-color: var(--purple);
+            color: #fff;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            background-color: #ffffff;
+        }
+        header h1, header span {
+            font-size:  1rem;
+            background-color: #fff !important;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding: 10px 0;
+        }
+        li:first-child {
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
+        }
+        li:last-child {
+            margin-bottom: 65px;
+        }
+        li > span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+        }
+        li > span.main {
+            position: relative;
+            justify-content: left;
+        }
+        span.time {
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            font-size: 0.6rem;
+        }
+        li > span > i {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+        span.main p.text {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span onclick="document.location='../index.html'"><i class="fa-sharp fa-solid fa-arrow-left"></i></span>
+        <h1>Notifications</h1>
+        <span><i class="fa-regular fa-calendar-days"></i></span>
+    </header>
+    <div class="container">
+        <ul>
+            <li>
+                <span><i class="fa-solid fa-gift" style="color: var(--purple);"></i></span>
+                <span class="main">
+                    <p class="text">You have been rewarded $15. It has been added to your remaining balance. You can confirm it in your bank account.</p>
+                    <span class="time">10:02PM</span>
+                </span>
+            </li>
+            <li>
+                <span><i class="fa-regular fa-newspaper" style="color: cornflowerblue;"></i></span>
+                <span class="main">
+                    <p class="text">Congratulations Dear Tolulope Ojo. You have been raised from tier one customer to tier three. Enjoy more freedom and remain limitless in your transactions.</p>
+                    <span class="time">9:50PM</span>
+                </span>  
+            </li>
+            <li>
+                <span><i class="fa-solid fa-triangle-exclamation" style="color: red;"></i></span>
+                <span class="main">
+                    <p class="text">Dear Tolulope Ojo. It has been noticed that the level of transactions taking place on your account has tripled more than your normal average for the last three months. Hence you are advised to check your settings and verify that you are the one authorizing these transactions.</p>
+                    <span class="time">8:47PM</span>
+                </span> 
+            </li>
+            <li>
+                <span><i class="fa-regular fa-message" style="color: mediumseagreen;"></i></span>
+                <span class="main">
+                    <p class="text">Your account has been debited $55. You can confirm it in your account.</p>
+                    <span class="time">8:45PM</span>
+                </span>
+            </li>
+            <li>
+                <span><i class="fa-solid fa-wallet" style="color: rgb(122, 12, 12);"></i></span>
+                <span class="main">
+                    <p class="text">Your account balance is $24,537.91. You can now spend more than your limits allow you to spend.</p>
+                    <span class="time">8:42PM</span>
+                </span>
+            </li>
+            <li>
+                <span><i class="fa-regular fa-newspaper" style="color: cornflowerblue;"></i></span>
+                <span class="main">
+                    <p class="text">Congratulations Dear Tolulope Ojo. You have been raised from tier one customer to tier three. Enjoy more freedom and remain limitless in your transactions.</p>
+                    <span class="time">7:51PM</span>
+                </span>
+            </li>
+            <li>              
+                <span><i class="fa-regular fa-message" style="color: mediumseagreen;"></i></span>
+                <span class="main">
+                    <p class="text">Your account has been debited $55. You can confirm it in your account.</p>
+                    <span class="time">7:46PM</span>
+                </span>
+            </li>
+            <li>
+                <span><i class="fa-solid fa-wallet" style="color: rgb(122, 12, 12);"></i></span>
+                <span class="main">
+                    <p class="text">Your account balance is $24,537.91. You can now spend more than your limits allow you to spend.</p>
+                    <span class="time">6:20PM</span>
+                </span>
+            </li>
+            <li>
+                <span><i class="fa-solid fa-gift" style="color: var(--purple);"></i></span>
+                <span class="main">
+                    <p class="text">You have been rewarded $15. It has been added to your remaining balance. You can confirm it in your bank account.</p>
+                    <span class="time">4:11PM</span>
+                </span>
+            </li>
+            <li>
+                <span><i class="fa-solid fa-triangle-exclamation" style="color: red;"></i></span>
+                <span class="main">
+                    <p class="text">Dear Tolulope Ojo. It has been noticed that the level of transactions taking place on your account has tripled more than your normal average for the last three months. Hence you are advised to check your settings and verify that you are the one authorizing these transactions.</p>
+                    <span class="time">3:09PM</span>
+                </span>
+            </li>
+            <li>
+                <span><i class="fa-solid fa-wallet" style="color: rgb(122, 12, 12);"></i></span>
+                <span class="main">
+                    <p class="text">Your account balance is $24,537.91. You can now spend more than your limits allow you to spend.</p>
+                    <span class="time">2:27PM</span>
+                </span>
+            </li>
+            <li>
+                <span><i class="fa-solid fa-gift" style="color: var(--purple);"></i></span>
+                <span class="main">
+                    <p class="text">You have been rewarded $15. It has been added to your remaining balance. You can confirm it in your bank account.</p>
+                    <span class="time">1:34PM</span>
+                </span>
+            </li>
+            <li>
+                <span><i class="fa-regular fa-message" style="color: mediumseagreen;"></i></span>
+                <span class="main">
+                    <p class="text">Your account has been debited $55. You can confirm it in your account.</p>
+                    <span class="time">12:32PM</span>
+                </span>
+            </li>
+            <li>
+                <span><i class="fa-regular fa-newspaper" style="color: cornflowerblue;"></i></span>
+                <span class="main">
+                    <p class="text">Congratulations Dear Tolulope Ojo. You have been raised from tier one customer to tier three. Enjoy more freedom and remain limitless in your transactions.</p>
+                    <span class="time">11:01AM</span>
+                </span>
+            </li>
+            <li>
+                <span><i class="fa-solid fa-gift" style="color: var(--purple);"></i></span>
+                <span class="main">
+                    <p class="text">You have been rewarded $15. It has been added to your remaining balance. You can confirm it in your bank account.</p>
+                    <span class="time">10:47AM</span>
+                </span>
+            </li>
+            <li>
+                <span><i class="fa-regular fa-newspaper" style="color: cornflowerblue;"></i></span>
+                <span class="main">
+                    <p class="text">Congratulations Dear Tolulope Ojo. You have been raised from tier one customer to tier three. Enjoy more freedom and remain limitless in your transactions.</p>
+                    <span class="time">9:23AM</span>
+                </span>
+            </li>
+            <li>
+                <span><i class="fa-solid fa-triangle-exclamation" style="color: red;"></i></span>
+                <span class="main">
+                    <p class="text">Dear Tolulope Ojo. It has been noticed that the level of transactions taking place on your account has tripled more than your normal average for the last three months. Hence you are advised to check your settings and verify that you are the one authorizing these transactions.</p>
+                    <span class="time">8:51AM</span>
+                </span> 
+            </li>
+            <li>
+                <span><i class="fa-regular fa-message" style="color: mediumseagreen;"></i></span>
+                <span class="main">
+                    <p class="text">Your account has been debited $55. You can confirm it in your account.</p>
+                    <span class="time">8:41AM</span>
+                </span>
+            </li>
+            <li>
+                <span><i class="fa-solid fa-gift" style="color: var(--purple);"></i></span>
+                <span class="main">
+                    <p class="text">You have been rewarded $15. It has been added to your remaining balance. You can confirm it in your bank account.</p>
+                    <span class="time">5:21AM</span>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        <span class="home" onclick="document.location='../index.html'"><i class="fa-regular fa-credit-card"></i></span>
+        <span class="statement" onclick="document.location='statement.html'"><i class="fa-solid fa-chart-simple"></i></span>
+        <span class="notifications"><i class="fa-regular fa-bell"></i></span>
+        <span class="settings" onclick="document.location='settings.html'"><i class="fa-solid fa-gear"></i></span>
+    </footer>
+</body>
+</html>

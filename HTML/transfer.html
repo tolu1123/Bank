@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer to Bank</title>
+    <link rel="stylesheet" href="../CSS/Styles.css">
+    <script src="https://kit.fontawesome.com/3d391fd37c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        header {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            background-color: #ffffff;
+            padding-bottom: 15px;
+        }
+        header h1, header span {
+            font-size:  1rem;
+        }
+        body {
+            background-color: #ccc;
+        }
+        h3 {
+            font-size: 0.8rem;
+        }
+        div.acc , div.beneficiaries {
+            background-color: #ffffff;
+            margin-top: 20px;
+            padding: 25px 20px;
+            border-radius: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 5px 10px;
+            font-size: 0.7rem;
+            height: 25px;
+            border: 1px solid;
+            border-radius: 5px;
+            outline: none;
+            cursor: auto;
+            caret-color: var(--purple);
+            /* animation: blink 1s linear infinite; */
+        }
+        div.bank {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            color: #ccc;
+            padding: 5px 0;
+        }
+        div h3 {
+            display: inline-block;
+            font-size: 0.7rem;
+        }
+        div span {
+            font-size: 0.6rem;
+        }
+        input[type="submit"] {
+            background-color: var(--purple);
+            color: #fff;
+            border: none;
+            width: 100%;
+            border-radius: 7px;
+            padding: 5px 0;
+        }
+        div.beneficiaries > div.head {
+            display: flex;
+            justify-content: space-between;
+        }
+        div.beneficiaries {
+            padding-top: 10px;
+        }
+        div.beneficiaries > div.head > a {
+            font-size: 0.6rem;
+            text-decoration: none;
+            color: #aaa;
+        }
+        div.beneficiaries > div.head > a:focus, div.beneficiaries > div.head > a.active {
+            color: var(--purple);
+            border-bottom: 2px solid var(--purple);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span onclick="document.location='../index.html'"><i class="fa-sharp fa-solid fa-arrow-left"></i></span>
+        <h1>Transfer to Bank</h1>
+        <span><i class="fa-solid fa-gift" style="color: var(--purple);margin-right: 15px;"></i>
+            <i class="fa-solid fa-ellipsis-vertical" style="color: #000;"></i>
+        </span>
+    </header>
+    
+    <div class="container">
+        <div class="acc">
+            <h3>Recipient Account</h3>
+            <div class="details">
+                <input type="text" placeholder="Enter 10-digit Account Number" maxlength="10">
+                <div class="bank">
+                    <h3>Select bank</h3> 
+                    <span><i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+                <input type="submit" value="Next">
+
+            </div>
+        </div>
+
+        <div class="beneficiaries">
+            <div class="head">
+                <a href="#" class="active"> All beneficiaries</a>
+                <a href="#">Favourites</a>
+                <a href="#"> View All <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

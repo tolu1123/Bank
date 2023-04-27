@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    font-size: 20px;
+}
+:root {
+    --purple: rgb(160, 5, 160);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px 0;
+}
+h1 {
+    color: var(--purple);
+    font-size: 1.2rem;
+}
+h2 {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+p {
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+}
+div.container {
+    padding: 0px 20px;
+    width: 100%;
+}
+nav {
+    min-width: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+div.jumbotron span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+nav span:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    background-image: url(../Images/DSC_0604.jpg);
+    background-size: 80px auto;
+    background-position: 90% -5%;
+    border-radius: 50%;
+}
+header i {
+    font-size: 25px;
+    color: var(--purple);
+}
+div.jumbotron {
+    background-color: rgb(250, 232, 235);
+    margin: 0px -20px 0 -20px;
+    border-radius: 0 0 50px 50px;
+}
+.mainjumbo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0 0 0;
+    position: relative;
+}
+.mainjumbo img {
+    display: block;
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+}
+.mainjumbo span {
+    background-color: var(--purple);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+    color: #fff;
+    position: absolute;
+}
+.mainjumbo span i {
+    font-size: 1.5rem;
+}
+.mainjumbo span:hover {
+    background-color: #fff;
+    color: var(--purple);
+}
+
+div.icons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+section {
+    text-align: center;
+}
+section span {
+    display: block;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section span img {
+    display: inline-block;
+    width: 70%;
+    height: auto;
+}
+section:nth-child(1) span {
+    background-color: rgb(247, 247, 4);
+}
+section:nth-child(2) span {
+    background-color: rgb(243, 198, 243);
+}
+section:nth-child(3) span {
+    background-color: rgb(250, 191, 201);
+}
+section:nth-child(4) span {
+    border: 1px solid var(--purple);
+}
+
+
+div.limit {
+    width: 100%;
+    margin-bottom: 30px;
+}
+div.limit img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    color: var(--purple);
+}
+footer i {
+    font-size: 1rem;
+}
+footer span {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+footer span span.alert {
+    background-color: red;
+    color: #fff;
+    font-size: 0.4rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    animation-name: animae;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes animae {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .mainjumbo img {
+        display: block;
+        width: 45%;
+        height: auto;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+    div.icon_holder > div > div.icon i {
+        font-size: 2rem;
+    }
+
+    div.icon_holder > div > section h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    div.icon_holder > div > section p {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    ul > li > span {
+        flex: 15%;
+    }
+    li > span.main {
+        flex: 85%;
+    }
+
+    div.tron {
+        background-image: url("../Images/pattern.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        width: 100%;
+        height: 450px;
+    }
+
+    div.head > h1 {
+        font-size: 2rem;
+    }
+    div.top p {
+        font-size: 1rem;
+    }
+    div.text h1 {
+        font-size: 2rem;
+    }
+    div.text h1 > span {
+        font-size: 1.2rem;
+    }
+    div.text h1 + span {
+        width: 75px;
+        aspect-ratio: 1/1;
+    }
+}
+@media (min-width: 451px) and (max-width: 767px) {
+    div.icon_holder > div > div.icon i {
+        font-size: 1.5rem;
+    }
+
+    div.icon_holder > div > section h2 {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
+    div.icon_holder > div > section p {
+        font-size: 1.1rem;
+        line-height: 1.1rem;
+    }
+
+    ul > li > span {
+        flex: 20%;
+    }
+    li > span.main {
+        flex: 80%;
+    }
+    div.tron {
+        background-image: url("../Images/pattern.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        width: 100%;
+        height: 375px;
+    }
+
+    div.head > h1 {
+        font-size: 1.8rem;
+    }
+    div.top p {
+        font-size: 0.9rem;
+    }
+    div.text h1 {
+        font-size: 1.8rem;
+    }
+    div.text h1 > span {
+        font-size: 1.1rem;
+    }
+    div.text h1 + span {
+        width: 60px;
+        aspect-ratio: 1/1;
+    }
+}
+@media (max-width: 450px){
+    div.icon_holder > div > div.icon i {
+        font-size: 0.9rem;
+    }
+
+    ul > li > span {
+        flex: 25%;
+    }
+    li > span.main {
+        flex: 75%;
+    }
+    div.tron {
+        background-image: url("../Images/pattern.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        width: 100%;
+        height: 300px;
+    }
+
+    div.head > h1 {
+        font-size: 1.6rem;
+    }
+    div.top p {
+        font-size: 0.8rem;
+    }
+    div.text h1 {
+        font-size: 1.6rem;
+    }
+    div.text h1 > span {
+        font-size: 1rem;
+    }
+    div.text h1 + span {
+        width: 50px;
+        aspect-ratio: 1/1;
+    }
+}
+
+
+

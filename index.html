@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANK</title>
+    <link rel="stylesheet" href="CSS/Styles.css">
+    <script src="https://kit.fontawesome.com/3d391fd37c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        span.home {
+            background-color: var(--purple);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="index">
+        <div class="jumbotron">
+            <header>
+                <h1>My Cards</h1>
+                <nav>
+                    <span><i class="fa-regular fa-bell"></i></span>
+                    <span></span>
+                </nav>
+            </header>
+            <div class="mainjumbo">
+                <img src="Images/C2.png" alt="">
+                <span class="plus"> <i class="fa-sharp fa-solid fa-plus"></i></span>
+            </div>
+        </div>
+
+        <div class="icons">
+            <section onclick="document.location='HTML/transfer.html'"><span><img src="Images/bank-transfer.png" alt=""></span>
+            <p>Transfer</p>
+            </section>
+            <section onclick="document.location='HTML/payment.html'"><span><img src="Images/payment-method.png" alt=""></span>
+            <p>Payment</p>
+            </section>
+            <section onclick="document.location='HTML/withdraw.html'"><span><img src="Images/money-withdrawal.png" alt=""></span>
+            <p>Withdraw</p>
+            </section>
+            <section onclick="document.location='HTML/loan.html'"><span><img src="Images/restricted.png" alt=""></span>
+            <p>Loan</p>
+            </section>
+        </div>
+        <div class="limit">
+            <h1>Limit</h1>
+            <img src="Images/limit.jpg" alt="">
+        </div>
+    </div>
+
+    <footer>
+        <span class="home"><i class="fa-regular fa-credit-card"></i></span>
+        <span class="statement" onclick="document.location='HTML/statement.html'"><i class="fa-solid fa-chart-simple"></i></span>
+        <span class="notifications" onclick="document.location='HTML/notifications.html'"><i class="fa-regular fa-bell"></i><span class="alert">18</span></span>
+        <span class="settings" onclick="document.location='HTML/settings.html'"><i class="fa-solid fa-gear"></i></span>
+    </footer>
+    </body>
+</html>
